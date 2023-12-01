@@ -1,0 +1,459 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  header{
+    position: absolute;
+    height: 50px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .logo img {
+    width: 100%;
+    height: 40vh;
+    position: inherit;
+    padding-top: 30px;
+    
+  }
+
+  .navigation ul {
+    display: flex;
+    padding: 0;
+    flex-wrap: nowrap;
+  }
+
+  .navigation li {
+    padding-top: 10px;
+    list-style: none;
+  }
+
+.navigation li a {
+  position: relative;
+  font-size: 1.1em;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 6px 15px;
+  font-family: poppins;
+  transition: 0.6s;
+}
+
+  .navigation a:hover,
+  .navigation a.active {
+    color: #333;
+  }
+
+  .navigation a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 30px;
+    z-index: -1;
+    transform: scale(0);
+    transition: 0.6s;
+    opacity: 0;
+  }
+
+  .navigation a:hover span,
+  .navigation a.active span {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+
+  img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+.content {
+  background-color: rgb(29, 29, 79); /* Menggunakan format RGB */
+  color: white;
+  text-align: center;
+  padding: 40px;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.content h1 {
+  font-size: 40px;
+  padding-top: 20px;
+  font-family: sans-serif;
+}
+
+.content p {
+    text-align: justify;
+    line-height: 20 px;
+    letter-spacing: 1px;
+    text-indent: 50px;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    opacity: 0.5;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.layer-2 {
+    position: absolute;
+    color: white;
+    text-align: center;
+}
+.layer-2 h1 {
+    padding-top: 250px;
+    font-size: 7ch;
+}
+.teks {
+  font-family: poppins;
+  font-weight: 500;
+}
+
+
+#Artists .container {
+  background-color: white; /* Menggunakan format RGB */
+  color: white;
+  text-align: center;
+  padding: 40px;
+  font-family: sans-serif;
+  position: relative;
+  padding-bottom: 250px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+[class^="img-box"] {
+  width: 100px;
+  height: 500px;
+  margin: 10px;
+  border-radius: 50px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.img-box1{
+  background: url(leonardo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.img-box2{
+  background: url(Rembrandt.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.img-box3{
+  background: url(afandi.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.img-box4{
+  background: url(paul.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.img-box5{
+  background: url(salvador.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.img-box6{
+  background: url(claude\ monet.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.img-box7{
+  background: url(raden-saleh.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.img-box8{
+  background: url(vicent\ van.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+[class^="img-box"]:hover {
+  width: 300px;
+  cursor: pointer;
+}
+
+
+
+
+.seveg {
+  width: 100%;
+  height: 42vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.seveg2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Artists {
+  background-color: white;
+  color: white;
+  text-align: center;
+  padding: 40px;
+  font-family: sans-serif;
+  position: relative;
+}
+
+#Artists h1 {
+  font-size: 40px;
+  padding-top: 20px;
+  font-family: poppins;
+  color: rgb(29, 29, 79);
+}
+
+#Artists p {
+    color: black;
+    text-align: center;
+    line-height: 20 px;
+    letter-spacing: 1px;
+    text-indent: 50px;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 40px;
+    opacity: 0;
+    transition: 0.7s;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#Artists p:hover {
+  opacity: 1;
+}
+
+
+
+
+#video {
+  background-color: rgb(29, 29, 79); /* Menggunakan format RGB */
+  color: white;
+  text-align: center;
+  font-family: poppins;
+  position: relative;
+  padding: 40px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#video img {
+  position: absolute;
+  opacity: 1;
+  transition: 0.5s;
+  bottom: 0;
+  width: 100%;
+}
+
+#video img:hover {
+  opacity: 0.6;
+}
+
+.vid {
+  position:absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.video-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  cursor: pointer;
+}
+
+.video-preview::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+
+.video-preview box-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  width: 100px;
+  height: 100px;
+  fill: white;
+  pointer-events: none;
+  z-index: 5;
+  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.video-preview img {
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 2;
+}
+
+.video-preview video {
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+}
+
+.video-preview:hover img {
+  z-index: 1;
+}
+
+.video-preview:hover video {
+  z-index: 2;
+}
+
+.video-preview:hover box-icon {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+@keyframes show {
+  from {
+      clip-path: circle(0.4% at 50% 50%);
+  }
+  to {
+      clip-path: circle(100% at 50% 50%);
+  }
+}
+
+.is-animated{
+  animation: show 500ms ease-in-out forwards;
+}
+
+.video-modal{
+  position: absolute;
+  inset: 0;
+  background:rgba(255, 255, 255, 0.8);
+  z-index: 20;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms ease;
+}
+
+.video-modal box-icon {
+  width: 3rem;
+  height: 3rem;
+  fill: #121f1d;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.video-modal .video {
+  width: 50%;
+  height: 50%;
+}
+
+.video-modal .video iframe{
+  width: 100%;
+  height: 100%;
+}
+
+.none {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
+.active {
+  opacity: 1;
+}
+
+.inactive {
+  opacity: 0;
+}
+
+#video h1 {
+  font-size: 40px;
+  padding-top: 20px;
+  font-family: poppins;
+  color: white;
+  position: absolute ;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.cuy {
+  background-color: rgb(29, 29, 79); /* Menggunakan format RGB */
+  color: white;
+  text-align: center;
+  padding: 40px;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.cuy h1 {
+  font-size: 40px;
+  padding-top: 20px;
+  font-family: sans-serif;
+}
