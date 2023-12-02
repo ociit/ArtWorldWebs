@@ -75,3 +75,56 @@ closeBtn.onclick = () => {
     modal.classList.replace('show', 'none')
   }, 500);
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  var navigationLinks = document.querySelectorAll('.navigation a');
+
+  // Fungsi untuk menghapus kelas active dari semua tautan
+  function removeActiveClass() {
+    navigationLinks.forEach(function(link) {
+      link.classList.remove('active');
+    });
+  }
+
+  // Fungsi untuk menambahkan kelas active pada tautan yang diklik
+  function setActiveClass(clickedLink) {
+    removeActiveClass(); // Hapus dulu kelas active dari semua tautan
+    clickedLink.classList.add('active'); // Tambahkan kelas active pada tautan yang diklik
+  }
+
+  // Fungsi untuk menentukan apakah pengguna berada di bagian tertentu
+  function isInSection(elementId) {
+    var element = document.getElementById(elementId);
+    var bounding = element.getBoundingClientRect();
+    return (
+      bounding.top >= 0 &&
+      bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+  }
+
+  // Tambahkan event listener untuk setiap tautan navigasi
+  navigationLinks.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+      event.preventDefault(); // Mencegah perilaku default dari tautan
+      var targetId = link.getAttribute('href').substring(1); // Ambil id target dari atribut href
+      var targetElement = document.getElementById(targetId); // Dapatkan elemen target berdasarkan id
+
+      // Periksa apakah elemen target ada sebelum memanggil setActiveClass
+      if (targetElement) {
+        setActiveClass(link);
+        
+        // Scroll ke elemen target dengan efek smooth
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Tambahkan event listener untuk memantau perubahan posisi dan mengubah warna font
+  // window.addEventListener('scroll', function() {
+  //   if (isInSection('About')) {
+  //     navigationLinks.forEach(function(link) {
+  //       link.style.color = 'blue';
+  //     });
+  //   }
+  // });
+});
