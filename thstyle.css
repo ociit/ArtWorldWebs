@@ -470,6 +470,8 @@ svg {
   margin-bottom: 20px;
   break-inside: avoid;
   transition: 500ms;
+  
+
 }
 .gallery-container .box img {
   max-width: 100%;
@@ -479,5 +481,4 @@ svg {
   scale: 1.05;
   transition: 600ms;
   cursor: pointer;
-  opacity: 0.8;
 }
