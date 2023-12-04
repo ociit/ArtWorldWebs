@@ -10,14 +10,14 @@ html {
 }
 
 header {
-  position: absolute;
+  position:fixed;
   height: 50px;
   top: 0;
   left: 0;
   width: 100%;
   padding: 30px 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   z-index: 100;
 }
@@ -99,6 +99,7 @@ header {
   padding: 40px;
   font-family: sans-serif;
   position: relative;
+  padding-top: 4rem;
 }
 
 .content h1 {
@@ -240,6 +241,7 @@ svg {
   padding: 40px;
   font-family: sans-serif;
   position: relative;
+  padding-top: 4rem;
 }
 
 #Artists h1 {
@@ -276,10 +278,11 @@ svg {
   position: relative;
   padding: 40px;
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   display: flex;
   justify-content: center;
   text-align: center;
+  padding-top: 4rem;
 }
 
 #video img {
@@ -434,9 +437,12 @@ svg {
   align-items: center;
 }
 
+#gallery {
+  padding-top: 4rem;
+}
 .cuy {
-  background-color: rgb(29, 29, 79); /* Menggunakan format RGB */
-  color: white;
+  background-color: white; /* Menggunakan format RGB */
+  color: rgb(29, 29, 79);
   text-align: center;
   padding: 40px;
   font-family: sans-serif;
@@ -444,9 +450,37 @@ svg {
 }
 
 .cuy h1 {
-  font-size: 40px;
+  font-size: 45px;
   padding-top: 20px;
-  font-family: sans-serif;
+  font-family: poppins;
+  padding: 20px;
+}
+
+.gallery-container {
+  margin: 20px auto;
+  columns: 4;
+  column-gap: 20px;
+  padding-top: 50px;
+  background-color: rgb(29, 29, 79);
+  border-radius: 15px;
+  padding: 20px;
+  padding-top: 40px;
+}
+.gallery-container .box {
+  margin-bottom: 20px;
+  break-inside: avoid;
+  transition: 500ms;
+  
+
+}
+.gallery-container .box img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+.gallery-container .box:hover{
+  scale: 1.05;
+  transition: 600ms;
+  cursor: pointer;
 }
 
 .gallery-container {
