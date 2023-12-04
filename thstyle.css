@@ -482,3 +482,18 @@ svg {
   transition: 600ms;
   cursor: pointer;
 }
+
+.gallery-container {
+  margin: 20px auto;
+  columns: 4;
+  column-gap: 20px;
+}
+.gallery-container .box {
+  width: 100%;
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+.gallery-container .box img {
+  max-width: 100%;
+  border-radius: 15px;
+}
